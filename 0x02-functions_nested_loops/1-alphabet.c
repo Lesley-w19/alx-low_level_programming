@@ -2,7 +2,7 @@
 /**
  * main - print alphabets in small letters
  *
- * Description: have _putchar used only twice
+ * Description:have _putchar used only twice
  *
  * Return:0 (success)
  */
