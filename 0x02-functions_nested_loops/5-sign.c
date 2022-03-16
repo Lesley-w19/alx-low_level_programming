@@ -13,7 +13,7 @@ int print_sign(int n)
 {
 	if (n > 0)
 	{
-		_putchar(50;)
+		_putchar(50);
 		return (1);
 	}
 	else if (n < 0)
