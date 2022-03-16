@@ -3,8 +3,6 @@
 /**
  * main - print alphabets in small letters
  *
- * Description: use _putchar only twice in the code
- *
  * Return:0 (success)
  */
 void print_alphabet(void)
