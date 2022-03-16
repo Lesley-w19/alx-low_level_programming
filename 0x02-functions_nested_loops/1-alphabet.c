@@ -1,11 +1,9 @@
 #include "main.h"
 
 /**
- * main - print alphabets in small letters
+ * print_alphabet - Prints the alphabet in lowercase.
  *
- * Description:use _putchar only twice in code
- *
- * Return:0 (success)
+ * Return: Always 0 (Success)
  */
 void print_alphabet(void)
 {
