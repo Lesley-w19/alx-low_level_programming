@@ -2,10 +2,9 @@
 /**
  *main - prints the alphabet in lowercase
  *
- * Description: have a prototype(main.h)
- * only use _putchar twice in code
+ * Description: only use _putchar twice in code 
  *
- * Return: 0 (success)
+ * Return:0 (success)
  */
 void print_alphabet(void)
 {
