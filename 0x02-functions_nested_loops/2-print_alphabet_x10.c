@@ -3,6 +3,8 @@
 /**
  * main - print lowercase alphabets 10x
  *
+ * Description:use _putchar only twice in code
+ *
  * Return:0 (success)
  */
 void print_alphabet_x10(void)
