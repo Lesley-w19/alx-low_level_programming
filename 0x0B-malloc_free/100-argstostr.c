@@ -12,7 +12,7 @@
 char *argstostr(int ac, char **av)
 {
 	char *agout;
-	int x, y, z, ma;
+	int x, y, z, ya;
 
 	if (ac == 0)
 		return (NULL);
@@ -35,20 +35,21 @@ char *argstostr(int ac, char **av)
 		return (NULL);
 	}
 
-	for (y = z = ma; ma < x; y++, ma++)
+	for (y = z = ya; ya < x; y++, ya++)
 	{
 		if (av[y][z] == '\0')
 		{
-			agout[ma] = '\n';
+			agout[ya] = '\n';
 			y++;
-			ma++;
+			ya++;
 			z = 0;
 		}
 
-		if (ma < x - 1)
-			agout[ma] = av[y][z];
+		if (ya < x - 1)
+			agout[ya] = av[y][z];
 	}
-	agout[ma] = '\0';
+
+	agout[ya] = '\0';
 
 	return (agout);
 }
