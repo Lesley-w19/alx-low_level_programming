@@ -29,13 +29,13 @@ char *argstostr(int ac, char **av)
 
 	agout = malloc((x + 1) * sizeof(char));
 
-	if ( agout == NULL)
+	if (agout == NULL)
 	{
 		free(agout);
 		return (NULL);
 	}
 
-	for (y = z = ya = 0; ya < x; y++, ya++)
+	for (y = z = ya = 0; ya < x; z++, ya++)
 	{
 		if (av[y][z] == '\0')
 		{
