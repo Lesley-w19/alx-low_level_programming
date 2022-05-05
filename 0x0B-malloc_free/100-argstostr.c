@@ -35,7 +35,7 @@ char *argstostr(int ac, char **av)
 		return (NULL);
 	}
 
-	for (y = z = ya; ya < x; y++, ya++)
+	for (y = z = ya = 0; ya < x; y++, ya++)
 	{
 		if (av[y][z] == '\0')
 		{
