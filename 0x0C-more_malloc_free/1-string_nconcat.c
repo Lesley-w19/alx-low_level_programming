@@ -5,7 +5,7 @@
  * string_nconcact - concatenates/combines two strings.
  * @s1: first string.
  * @s2: second string.
- * @n: the amount of bytes.
+ * @n: number of bytes.
  *
  * Return: returns a pointer to a newly allocated memory.
  * If malloc fails, the process termination should be of state value 98.
