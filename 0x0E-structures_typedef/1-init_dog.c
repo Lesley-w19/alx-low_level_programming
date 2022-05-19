@@ -2,11 +2,12 @@
 
 /**
  * init_dog - a function that initializes the variable of type struct dog.
- * @d: pointer to the struct.
+ * @d: the struct itself.
  * @name: name of the dog.
  * @age: age of the dog.
  * @owner: owner of the dog.
  *
+ * (*d). || d->, to access the elements in the structure.
  *Return: no return.
  */
 
