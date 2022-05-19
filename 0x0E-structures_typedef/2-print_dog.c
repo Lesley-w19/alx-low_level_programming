@@ -7,6 +7,7 @@
  * @d: the struct itself.
  *
  * Return: no return.
+ *
  * If an element of d is NULL, print (nil).
  * eg ( if name is NULL, print Name: (nil) ).
  * If d is NULL print nothing.
@@ -23,10 +24,10 @@ void print_dog(struct dog *d)
 
 		printf("Age: %f\n", d->age);
 
-		if(!(d->owner))
-			printf("Owner: (nil)\n");
-		else
+		if(((*d).owner))
 			printf("Owner: %s\n", d->owner);
+		else
+			printf("Owner: (nil)\n");
 	}
 }
 
