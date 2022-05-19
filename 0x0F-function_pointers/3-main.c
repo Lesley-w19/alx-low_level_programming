@@ -1,4 +1,5 @@
 #include "3-calc.h"
+#include <stdlib.h>
 
 /**
  * main - the main function.
@@ -7,6 +8,9 @@
  * @argv:  the argument vector.
  *
  * Return: always returns 0.
+ * if number of arguments is wrong, print error, exit with status 98.
+ * if no operator, print Error, exit with status 99.
+ * if user b for / or % is 0, print Error, exitwith status 100.
  */
 
 int main(int argc, int *argv[])
@@ -16,13 +20,13 @@ int main(int argc, int *argv[])
 
 	if (argc != 4)
 	{
-		printf("Error");
+		printf("Error\n");
 		exit(98);
 	}
 
 	if (argv[2][1])
 	{
-		printf("Error");
+		printf("Error\n");
 		exit(99);
 	}
 
@@ -30,7 +34,7 @@ int main(int argc, int *argv[])
 
 	if (optn == NULL)
 	{
-		printf("Error");
+		printf("Error\n");
 		exit(99);
 	}
 
