@@ -18,15 +18,16 @@ int sum_them_all(const unsigned int n, ...)
 	if (n == 0)
 		return (0);
 
-	va_start (par, n);
+	va_start(par, n);
 
 	for (x = 0; x < n; x++)
 	{
-		int numbers = va_arg (par, int);
+		int numbers = va_arg(par, int);
 		sum += numbers;
 	}
 
-	va_end (par);
+	va_end(par);
+
 	return (sum);
 }
 
