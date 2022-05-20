@@ -59,6 +59,19 @@ void chk_str(va_list par_str)
 
 
 /**
+ * struct check - struct of check.
+ * @chk: type.
+ * @f: the function it refers to.
+ */
+
+typedef struct check
+{
+	char *chk;
+	void (*f)(va_list par);
+} check_t;
+
+
+/**
  * print_all - function that prints anything.
  * @format: is a list of the types of arguments passed to the function.
  *
@@ -68,7 +81,7 @@ void chk_str(va_list par_str)
 
 void print_all(const char * const format, ...)
 {
-	chk_types types[] = {
+	check_t types[] = {
 		{"c", chk_char},
 		{"i", chk_int},
 		{"f", chk_float},
