@@ -18,5 +18,7 @@ void free_dog(dog_t *d)
 		free(d->age);
 		free((*d));
 	}
+
+	return (0);
 }
 
