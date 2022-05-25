@@ -12,7 +12,7 @@ int set_bit(unsigned long int *n, unsigned int index)
 {
 	unsigned int b;
 
-	if (index > 63)
+	if (index > 9)
 		return (-1);
 
 	b = 1 << index;
