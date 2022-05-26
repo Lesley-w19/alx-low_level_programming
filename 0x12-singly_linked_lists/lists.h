@@ -4,6 +4,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <stddef.h>
 
 /**
  * struct list_s - singly linked list
@@ -12,7 +13,6 @@
  * @next: points to the next node
  *
  * Description: singly linked list node structure
- * for Holberton project
  */
 typedef struct list_s
 {
