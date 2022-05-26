@@ -16,19 +16,19 @@
 list_t *add_node_end(list_t **head, const char *str)
 {
 	list_t *new_node, *temp;
-	size_t nochar;
+	size_t nchar;
 
-	new_node = malloc(sizeof(list_t));
+	new = malloc(sizeof(list_t));
 
 	if (new_node == NULL)
 		return (NULL);
 
 	new_node->str = strdup(str);
 
-	for (nochar = 0; str[nochar]; nochar++)
+	for (nchar = 0; str[nchar]; nchar++)
 		;
 
-	new_node->len = nochar;
+	new_node->len = nchar;
 	new_node->next = NULL;
 	temp = *head;
 
