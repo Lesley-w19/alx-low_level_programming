@@ -1,4 +1,5 @@
 #include "lists.h"
+#include <stdio.h>
 
 /**
  *_construct - function that gives the constructor function.
@@ -6,7 +7,7 @@
  * printf: can be used to print the characters.
  */
 
-void _construct(void) _attribute_((constructor));
+void _construct(void) __attribute__((constructor));
 
 void _construct(void)
 {
