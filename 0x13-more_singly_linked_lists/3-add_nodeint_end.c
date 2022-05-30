@@ -1,4 +1,7 @@
 #include "lists.h"
+#include <stdlib.h>
+#include <stdio.h>
+
 
 /**
  * add_nodeint_end - a function that adds a new node at the end of a 
