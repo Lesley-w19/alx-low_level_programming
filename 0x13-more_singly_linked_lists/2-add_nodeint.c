@@ -1,6 +1,5 @@
 #include "lists.h"
-#include <stdlib.h>
-#include <stdio.h>
+
 
 /**
  * add_nodeint -  a function that adds a new node at the beginning of 
@@ -8,28 +7,20 @@
  * @head: pointer to the head of the list.
  * n: an element of the list.
  *
- * Return: returns the address of the new element.
- * if it fails, return NULL.
+ * Return: address of the new element. NUll if it failed.
  */
-
 listint_t *add_nodeint(listint_t **head, const int n)
 {
 	listint_t *new;
 
 	new = malloc(sizeof(listint_t));
 
-	if (new = NULL)
+	if (new == NULL)
 		return (NULL);
 
 	new->n = n;
-
-	if (*head == NULL)
-		*head = new;
-	else
-	{
-		new->next = *head;
-		*head = new;
-	}
+	new->next = *head;
+	*head = new;
 
 	return (*head);
 }
