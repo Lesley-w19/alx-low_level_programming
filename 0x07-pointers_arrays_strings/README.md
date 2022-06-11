@@ -14,3 +14,4 @@ Even more pointers, arrays and strings
 2. strchr
 3. strspn
 4. strpbrk
+5-strstr.c
