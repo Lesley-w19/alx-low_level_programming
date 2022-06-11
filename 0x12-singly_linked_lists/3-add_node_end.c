@@ -1,4 +1,8 @@
 #include "lists.h"
+#include <stddef.h>
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
 
 /**
  * add_node_end - function that adds a new node at the end of a list_t list.
@@ -28,7 +32,7 @@ list_t *add_node_end(list_t **head, const char *str)
 	new->next = NULL;
 	temp = *head;
 
-	if (temp == null)
+	if (temp == NULL)
 	{
 		*head = new;
 	}
