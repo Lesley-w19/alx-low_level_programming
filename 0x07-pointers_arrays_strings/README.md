@@ -10,3 +10,4 @@ Even more pointers, arrays and strings
 8. Double pointer, double fun
 9. My primary goal of hacking was the intellectual curiosity, the seduction of adventure
 0. memset
+1. memcpy
