@@ -1,11 +1,14 @@
 #include <stdio.h>
 #include <stdlib.h>
+
 /**
  * main - program multiplies two numbers
  * @argc: number of command line arguments
  * @argv: array contains program command line arguments
- * Return 0 is success
+ *
+ * Return: returns 0 is success
  */
+
 int main(int argc, char *argv[])
 {
 	if (argc != 3)
