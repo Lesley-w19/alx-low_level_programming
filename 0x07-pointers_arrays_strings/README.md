@@ -17,3 +17,4 @@ Even more pointers, arrays and strings
 5-strstr.c
 6. Chess is mental torture
 6. Chess is mental torture
+9. My primary goal of hacking was the intellectual curiosity, the seduction of adventure
