@@ -16,3 +16,4 @@ Even more pointers, arrays and strings
 4. strpbrk
 5-strstr.c
 6. Chess is mental torture
+6. Chess is mental torture
