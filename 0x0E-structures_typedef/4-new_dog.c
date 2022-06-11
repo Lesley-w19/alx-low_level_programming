@@ -12,42 +12,39 @@
  * Return: struct dog 
  * return NULL, if function fails.
  */
-
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	dog_t *p = malloc(sizeof(*p));
-	int d, dname, downer;
+	dog_t *d;
+	int sizeName = _strlen_recursion(name), sizeOwner = _strlen_recursion(owner);
 
-	if (p == NULL || !(name) || !(owner))
+	if (name == NULL || age < 0 || owner == NULL)
+		return (NULL);
+
+	d = malloc(sizeof(dog_t));
+
+	if (d == NULL)
+		return (NULL);
+
+	d->name = malloc(sizeof(char) * sizeName + 1);
+
+	if (d->name == NULL)
 	{
-		free(p);
+		free(d);
 		return (NULL);
 	}
 
-	for (dname = 0; name[dname]; dname++)
-                ;
+	d->owner = malloc(sizeof(char) * sizeOwner + 1);
 
-        for (downer = 0; owner[downer]; downer++)
-                ;
-
-	p->name = malloc(sizeof(dname) + 1);
-        p->owner = malloc(sizeof(downer) + 1);
-
-	if (p->name == NULL || p->owner == NULL)
+	if (d->owner == NULL)
 	{
-		free(p->name);
-		free(p->owner);
-		free(p);
-		return(NULL);
+		free(d->name);
+		free(d);
+		return (NULL);
 	}
 
-	for (d = 0; d < dname; d++)
-		p->name[d] = name[d];
+	_strcpy(d->name, name);
+	_strcpy(d->owner, owner);
+	d->age = age;
 
-	p->age = age;
-
-	for (d = 0; d < downer; d++)
-		p->owner[d] = name[d];
-
-	return (p);
+	return (d);
 }
