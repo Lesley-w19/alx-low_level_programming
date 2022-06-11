@@ -11,3 +11,4 @@ Even more pointers, arrays and strings
 9. My primary goal of hacking was the intellectual curiosity, the seduction of adventure
 0. memset
 1. memcpy
+2. strchr
