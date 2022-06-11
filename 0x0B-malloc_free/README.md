@@ -7,3 +7,4 @@ MALLOC _ FREE
 5. It isn't the mountains ahead to climb that wear you out; it's the pebble in your shoe
 6. I will show you how great I am
 0. Float like a butterfly, sting like a bee
+5. It isn't the mountains ahead to climb that wear you out; it's the pebble in your shoe
