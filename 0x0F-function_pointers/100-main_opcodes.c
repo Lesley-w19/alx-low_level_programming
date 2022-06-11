@@ -30,7 +30,7 @@ int main(int argc, char *argv[])
 		exit(2);
 	}
 
-	for (n = 0; n < nbyts; n++)
+	for (n = 0; n < nbytes; n++)
 	{
 		printf("%02x", op_codes[n] & 0xFF);
 
