@@ -5,18 +5,18 @@
  * @a: input pointer.
  * Return: no return.
  */
+
 void print_chessboard(char (*a)[8])
 {
-	unsigned int y, m = 0;
+ 	unsigned int col, row;
 
-	for (y = 0; y < 64; y++)
+	for (row = 0; row < 8; row++)
 	{
-		if (y % 8 == 0 && y != 0)
+		for (col = 0; col < 8; col++)
 		{
-			m = i;
-			_putchar('\n');
+			_putchar(a[row][col]);
 		}
-		_putchar(a[y / 8][y - m]);
+
+		_putchar('\n');
 	}
-	_putchar('\n');
 }
