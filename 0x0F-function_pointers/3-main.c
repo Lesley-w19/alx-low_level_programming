@@ -13,7 +13,7 @@
  * if user b for / or % is 0, print Error, exitwith status 100.
  */
 
-int main(int argc, int *argv[])
+int main(int argc, char *argv[])
 {
 	int a, b;
 	int (*optn)(int, int);

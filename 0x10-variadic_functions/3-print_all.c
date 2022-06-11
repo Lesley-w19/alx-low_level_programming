@@ -1,119 +1,57 @@
 #include "variadic_functions.h"
-#include <stdarg.h>
-#include <stdio.h>
-
 
 /**
- * chk_int - function that prints out interger.
- * @par_int: the data of type.
+ * print_all- a function that prints anything.
+ * @format: is a list of typs of arguments passed to the function.
  *
  * Return: no return.
- */
-
-void chk_int(va_list par_int)
-{
-	printf("%d", va_arg(par_int, int));
-}
-
-/**
- * chk_char - function that prints out the character char.
- * @par_char: represents the data type.
- *
- * Return: no return.
- */
-
-void chk_char(va_list par_char)
-{
-	printf("%c", va_arg(par_char, int));
-}
-
-/**
- * chk_float - function that prints out float.
- * @par_float: represents the data type.
- *
- * Return: no return.
- */
-void chk_float(va_list par_float)
-{
-	printf("%f", va_arg(par_float, double));
-}
-
-/**
- * chk_str - function that prints the string.
- * @par_str: represents the data tpye.
- *
- * Return: no return.
- * if the string is NULL, print (nil).
- */
-void chk_str(va_list par_str)
-{
-	char *str;
-
-	str = va_arg(par_str, char *);
-
-	if (str)
-		printf("%s", str);
-	else
-		printf("(nil)");
-}
-
-
-/**
- * struct check - struct of check.
- * @chk: type.
- * @f: the function it refers to.
- */
-
-typedef struct check
-{
-	char *chk;
-	void (*f)(va_list par);
-} check_t;
-
-
-/**
- * print_all - function that prints anything.
- * @format: is a list of the types of arguments passed to the function.
- *
- * Return: no return.
- * print a new line at the end of the function.
  */
 
 void print_all(const char * const format, ...)
 {
-	check_t types[] = {
-		{"c", chk_char},
-		{"i", chk_int},
-		{"f", chk_float},
-		{"s", chk_str},
-		{NULL, NULL}
-	};
+	va_list varlist;
+	unsigned int l = 0, m, n = 0;
+	char *str;
+	const char t_arg[] = "cifs";
 
-	int a = 0, b = 0;
-	va_list args;
-	char *separator = "";
+	va_start(varlist, format);
 
-	va_start(args, format);
-
-	while (format)
+	while (format && format[l])
 	{
-		if (format[a])
+		m = 0;
+		while (t_arg[m])
 		{
-			while (types[b].chk)
+			if (format[l] == t_arg[m] && n)
 			{
-				if (format[a] == *types[b].chk)
-				{
-					printf("%s", separator);
-					types[b].f(args);
-					separator = ", ";
-				}
-				b++;
+				printf(", ");
+				break;
 			}
+			m++;
 		}
-		b = 0;
-		a++;
-	}
 
-	printf("\n");
-	va_end(args);
+		switch (format[l])
+		{
+			case 'c':
+				printf("%c", va_arg(varlist, int)), n = 1;
+				break;
+			case 'i':
+				printf("%d", va_arg(varlist, int)), n = 1;
+				break;
+			case 'f':
+				printf("%f", va_arg(varlist, double)), n = 1;
+				break;
+			case 's':
+				str = va_arg(varlist, char *), n = 1;
+				
+				if (!str)
+				{
+					printf("nil");
+					break;
+				}
+				printf("%s", str);
+				break;
+		}
+		l++;
+	}
+	printf("\n"), va_end(varlist);
 }
