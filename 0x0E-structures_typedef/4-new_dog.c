@@ -12,39 +12,45 @@
  * Return: struct dog 
  * return NULL, if function fails.
  */
+
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	dog_t *d;
-	int sizeName = _strlen_recursion(name), sizeOwner = _strlen_recursion(owner);
+	dog_t *p_dog;
+	int i, lname, lowner;
 
-	if (name == NULL || age < 0 || owner == NULL)
-		return (NULL);
-
-	d = malloc(sizeof(dog_t));
-
-	if (d == NULL)
-		return (NULL);
-
-	d->name = malloc(sizeof(char) * sizeName + 1);
-
-	if (d->name == NULL)
+	p_dog = malloc(sizeof(*p_dog));
+	if (p_dog == NULL || !(name) || !(owner))
 	{
-		free(d);
+		free(p_dog);
 		return (NULL);
 	}
 
-	d->owner = malloc(sizeof(char) * sizeOwner + 1);
+	for (lname = 0; name[lname]; lname++)
+		;
 
-	if (d->owner == NULL)
+	for (lowner = 0; owner[lowner]; lowner++)
+		;
+
+	p_dog->name = malloc(lname + 1);
+	p_dog->owner = malloc(lowner + 1);
+
+	if (!(p_dog->name) || !(p_dog->owner))
 	{
-		free(d->name);
-		free(d);
+		free(p_dog->owner);
+		free(p_dog->name);
+		free(p_dog);
 		return (NULL);
 	}
 
-	_strcpy(d->name, name);
-	_strcpy(d->owner, owner);
-	d->age = age;
+	for (i = 0; i < lname; i++)
+		p_dog->name[i] = name[i];
+	p_dog->name[i] = '\0';
 
-	return (d);
+	p_dog->age = age;
+
+	for (i = 0; i < lowner; i++)
+		p_dog->owner[i] = owner[i];
+	p_dog->owner[i] = '\0';
+
+	return (p_dog);
 }
