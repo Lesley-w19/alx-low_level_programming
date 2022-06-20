@@ -8,7 +8,6 @@
  *
  * Return: returns a pointer to an array of char
  */
-
 char *argstostr(int ac, char **av)
 {
 	char *agout;
@@ -16,7 +15,6 @@ char *argstostr(int ac, char **av)
 
 	if (ac == 0)
 		return (NULL);
-
 	for (x = y = 0; y < ac; y++)
 	{
 		if (av[y] == NULL)
@@ -28,7 +26,6 @@ char *argstostr(int ac, char **av)
 	}
 
 	agout = malloc((x + 1) * sizeof(char));
-
 	if (agout == NULL)
 	{
 		free(agout);
@@ -44,13 +41,11 @@ char *argstostr(int ac, char **av)
 			ya++;
 			z = 0;
 		}
-
 		if (ya < x - 1)
 			agout[ya] = av[y][z];
 	}
 
 	agout[ya] = '\0';
-
 	return (agout);
 }
 

@@ -6,8 +6,10 @@
  *     is in form of integers
  * @argv: is the array that contains the command line arguments
  *    printed in form of characters/strings
- * Return 0 is success
+ *
+ * Return: return  0 is success
  */
+
 int main(int argc __attribute__((unused)), char *argv[])
 {
 	printf("%s\n", argv[0]);
