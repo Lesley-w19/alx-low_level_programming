@@ -15,15 +15,12 @@ hash_table_t *hashTable = NULL;
 
 if (!size)
 return (NULL);
-
 hashTable = malloc(sizeof(struct hash_table_s));
 if (hashTable == NULL)
 return (NULL);
-
 hashTable->array = malloc(sizeof(struct hash_node_s *) * size);
 if (hashTable->array == NULL)
 return (NULL);
-
 hashTable->size = size;
 for (i = 0; i < size; i++)
 hashTable->array[i] = NULL;
