@@ -3,8 +3,8 @@
  * hash_table_print - a a function that prints a hash table.
  * @ht: the hash table
  *
- * Return: print the key/value in the order that they appear in 
- * the array of hash table 
+ * Return: print the key/value in the order that they appear in
+ * the array of hash table
  * Order(array,list)
  * If ht is NULL, DONT PRINT ANYTHING
  */
