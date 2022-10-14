@@ -12,7 +12,7 @@ void hash_table_print(const hash_table_t *ht)
 {
 unsigned long int index;
 hash_node_t *node = NULL;
-int i;
+int i = 0;
 
 if (!ht)
 return;
@@ -26,13 +26,11 @@ node = ht->array[index];
 while (node != NULL)
 {
 if (i == 1)
-{
 printf(", ");
-printf("'%s':'%s'", node->key, node->value);
+printf("'%s': '%s'", node->key, node->value);
 
-node = node->next;
 i = 1;
-}
+node = node->next;
 }
 }
 
