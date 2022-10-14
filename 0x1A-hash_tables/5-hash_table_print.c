@@ -28,7 +28,7 @@ while (node != NULL)
 if (i == 1)
 {
 printf(", ");
-printf("'%s': '%s'", node->key, node->value);
+printf("'%s':'%s'", node->key, node->value);
 
 node = node->next;
 i = 1;
