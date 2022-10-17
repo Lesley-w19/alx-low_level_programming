@@ -15,9 +15,10 @@
 
 typedef struct listint_s
 {
-    const int n;
-    struct listint_s *prev;
-    struct listint_s *next;
+const int n;
+struct listint_s *prev;
+struct listint_s *next;
+
 } listint_t;
 
 int linear_search(int *array, size_t size, int value);
