@@ -14,7 +14,7 @@ printf("Searching in array:");
 
 for (i = start; i <= end; i++)
 {
-printf("%d ", i);
+printf("%d ", array[i]);
 
 if (i < end)
 printf(", ");
@@ -39,7 +39,8 @@ size_t indx;
 if (array == NULL)
 return (-1);
 
-int start = 0, end = size - 1;
+int start = 0;
+int end = size - 1;
 
 while (start <= end)
 {
