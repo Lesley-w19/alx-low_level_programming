@@ -8,15 +8,16 @@
  */
 void print_array(int *array, int start, int end)
 {
-int i;
+int index;
 
-printf("Searching in array:");
+printf("Searching in array: ");
 
-for (i = start; i <= end; i++)
+for (index = start; index <= end; index++)
 {
-printf("%d", array[i]);
 
-if (i < end)
+printf("%d", array[index]);
+
+if (index < end)
 printf(", ");
 }
 printf("\n");
