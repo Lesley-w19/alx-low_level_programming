@@ -5,3 +5,4 @@
 1. Binary search
 2. Big O #0
 3. Big O #1
+4. Big O #2
