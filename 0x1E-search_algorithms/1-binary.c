@@ -14,7 +14,7 @@ printf("Searching in array:");
 
 for (i = start; i <= end; i++)
 {
-printf("%d ", array[i]);
+printf("%d", array[i]);
 
 if (i < end)
 printf(", ");
