@@ -43,6 +43,7 @@ return -1;
  
 while (array[prev] < value)
 {
+printf("Value checked array[%ld] = [%d]\n", prev, array[prev]);
 prev++;
  
 if (prev == min(step, size))
