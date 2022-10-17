@@ -10,3 +10,5 @@
 6. Big O #4
 7. Jump search
 8. Big O #5
+
+14. Big O #6
