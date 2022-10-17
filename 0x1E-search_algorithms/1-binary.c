@@ -35,11 +35,10 @@ printf("\n");
 int binary_search(int *array, size_t size, int value)
 {
 size_t indx;
+int start = 0, end = size - 1;
 
 if (array == NULL)
 return (-1);
-
-int start = 0, end = size - 1;
 
 while (start <= end)
 {
