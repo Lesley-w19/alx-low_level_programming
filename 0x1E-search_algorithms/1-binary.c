@@ -39,8 +39,7 @@ size_t indx;
 if (array == NULL)
 return (-1);
 
-int start = 0;
-int end = size - 1;
+int start = 0, end = size - 1;
 
 while (start <= end)
 {
