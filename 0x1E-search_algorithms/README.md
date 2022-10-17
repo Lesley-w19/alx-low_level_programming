@@ -10,6 +10,7 @@
 6. Big O #4
 7. Jump search
 8. Big O #5
+9. Interpolation search
 
 14. Big O #6
 15. Big O #7
