@@ -13,5 +13,5 @@ OBJ = ${SRC:.c=.o}
 NAME = school
 
 # is the target that compiles our executable
-all: $(SRC)
+all: $(SRC) $(OBJ)
 	$(CC) $(OBJ) -o $(NAME)
