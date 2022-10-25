@@ -1,0 +1,17 @@
+#Create your first useful Makefile.
+
+# the compiler to be used
+CC = gcc
+
+# the .c files
+SRC = main.c school.c
+
+# the .o files that specifies files names
+OBJ = ${SRC:.c=.o}
+
+# the name of the executable
+NAME = school
+
+# is the target that compiles our executable
+all: $(SRC)
+	$(CC) $(OBJ) -o $(NAME)
