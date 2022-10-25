@@ -24,7 +24,7 @@ all: $(OBJ)
 
 ### deletes all Emacs and Vim temporary files along with the executable
 clean:
-	$(RM) *~$(NAME)
+	$(RM) *~ $(NAME)
 
 ### deletes the object files
 oclean:
