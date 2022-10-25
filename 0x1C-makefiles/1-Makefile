@@ -8,4 +8,4 @@ SRC = main.c school.c
 
 #the target that compiles our executable
 all: $(SRC)
-    $(CC) $(SRC) -o school
+	$(CC) $(SRC) -o school
