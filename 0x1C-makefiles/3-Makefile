@@ -1,0 +1,34 @@
+## Create a usefull makefile
+### the compiler to be used
+CC = gcc
+
+### the .c files
+SRC = main.c school.c
+
+### the .o files file names
+OBJ = ${SRC: .c = .o}
+
+### the name of the executable
+NAME = school
+
+### the program to delete files
+RM = rm -f
+
+## is the target that compiles our executable
+### builds your executable
+all: $(SRC)
+	$(CC) $(OBJ) -o $(NAME)
+
+### deletes all Emacs and Vim temporary files along with the executable
+clean:
+	$(RM) *~$(NAME)
+
+### deletes the object files
+oclean:
+	$(RM) $(OBJ)
+
+### deletes all Emacs and Vim temporary files, the executable, and the object files
+fclean: oclean clean
+
+### forces recompilation of all source files
+re: oclean all
