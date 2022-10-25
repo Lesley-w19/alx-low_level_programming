@@ -6,7 +6,7 @@ CC = gcc
 SRC = main.c school.c
 
 ### the .o files file names
-OBJ = ${SRC: .c = .o}
+OBJ = ${SRC:.c=.o}
 
 ### the name of the executable
 NAME = school
