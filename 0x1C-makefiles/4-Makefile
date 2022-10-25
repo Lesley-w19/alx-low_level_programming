@@ -6,7 +6,7 @@ CC = gcc
 SRC = main.c school.c
 
 ### the .o files file names
-OBJ = ${SRC: .c = .o}
+OBJ = ${SRC:.c=.o}
 
 ### the name of the executable
 NAME = school
@@ -19,15 +19,15 @@ CFLAGS = -Wall -Werror -Wextra -pedantic
 
 ## is the target that compiles our executable
 ### builds your executable
-all: $(SRC) $(OBJ)
+all: $(OBJ)
 	$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
 
 ### deletes all Emacs and Vim temporary files along with the executable
-clean:
+clean: ;
 	$(RM) *~ $(NAME)
 
 ### deletes the object files
-oclean:
+oclean: ;
 	$(RM) $(OBJ)
 
 ### deletes all Emacs and Vim temporary files, the executable, and the object files
