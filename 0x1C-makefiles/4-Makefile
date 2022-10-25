@@ -19,7 +19,7 @@ CFLAGS = -Wall -Werror -Wextra -pedantic
 
 ## is the target that compiles our executable
 ### builds your executable
-all: $(OBJ)
+all: $(SRC) $(OBJ)
 	$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
 
 ### deletes all Emacs and Vim temporary files along with the executable
