@@ -6,3 +6,4 @@
 2. make -f 2-Makefile
 3. make -f 3-Makefile
 4. A complete Makefile
+6. make -f 100-Makefile
