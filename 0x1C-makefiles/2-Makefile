@@ -3,7 +3,7 @@
 # the compiler to be used
 CC = gcc
 
-# the .c files
+# the .c files as source
 SRC = main.c school.c
 
 # the .o files that specifies files names
