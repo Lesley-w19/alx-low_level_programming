@@ -1,0 +1,11 @@
+#Create a Makefile - with variables.
+
+#the compiler to be used
+CC = gcc
+
+#the .c files
+SRC = main.c school.c
+
+#the target that compiles our executable
+all: $(SRC)
+    $(CC) $(SRC) -o school
