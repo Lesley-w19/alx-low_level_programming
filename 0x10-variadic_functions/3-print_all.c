@@ -2,12 +2,11 @@
 /**
  * print_all- a function that prints anything.
  * @format: a list of typs of arguments passed to the func
- * 
  */
 void print_all(const char * const format, ...)
 {
 	va_list varlist;
-	unsigned int l = 0, m = 0, n = 0;
+	unsigned int l = 0, m, n = 0;
 	char *str;
 	const char t_arg[] = "cifs";
 	va_start(varlist, format);
@@ -16,6 +15,7 @@ void print_all(const char * const format, ...)
 	{
 		while (t_arg[m])
 		{
+			m = 0;
 			if (format[l] == t_arg[m] && n)
 			{
 				printf(", ");
