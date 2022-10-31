@@ -3,10 +3,10 @@
 
 
 /**
- * add_nodeint -  a function that adds a new node at the beginning of 
+ * add_nodeint -  a function that adds a new node at the beginning of
  * a listint_t list.
  * @head: pointer to the head of the list.
- * n: an element of the list.
+ * @n: an element of the list.
  *
  * Return: address of the new element. NUll if it failed.
  */
